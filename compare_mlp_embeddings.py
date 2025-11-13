@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 from datasets import load_from_disk
 from sklearn.model_selection import train_test_split
 from utils.zhipu_embedding import get_zhipu_embedding
-from manfit.manfit_ours import manfit_ours
+from manfit.manfit_ours_gpu import manfit_ours_gpu_batched as manfit_ours
 import torch
 import torch.nn as nn
 import torch.optim as optim
