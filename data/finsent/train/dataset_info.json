@@ -1,0 +1,56 @@
+{
+  "builder_name": "parquet",
+  "citation": "",
+  "config_name": "default",
+  "dataset_name": "fin_sent",
+  "dataset_size": 1635183,
+  "description": "",
+  "download_checksums": {
+    "hf://datasets/FinanceMTEB/FinSent@68ee0f0abf596e371ef6a308f685071e3b737bbb/data/train-00000-of-00001.parquet": {
+      "num_bytes": 872381,
+      "checksum": null
+    },
+    "hf://datasets/FinanceMTEB/FinSent@68ee0f0abf596e371ef6a308f685071e3b737bbb/data/test-00000-of-00001.parquet": {
+      "num_bytes": 97303,
+      "checksum": null
+    }
+  },
+  "download_size": 969684,
+  "features": {
+    "text": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "label": {
+      "dtype": "int64",
+      "_type": "Value"
+    },
+    "label_text": {
+      "dtype": "string",
+      "_type": "Value"
+    }
+  },
+  "homepage": "",
+  "license": "",
+  "size_in_bytes": 2604867,
+  "splits": {
+    "train": {
+      "name": "train",
+      "num_bytes": 1472397,
+      "num_examples": 8996,
+      "dataset_name": "fin_sent"
+    },
+    "test": {
+      "name": "test",
+      "num_bytes": 162786,
+      "num_examples": 1000,
+      "dataset_name": "fin_sent"
+    }
+  },
+  "version": {
+    "version_str": "0.0.0",
+    "major": 0,
+    "minor": 0,
+    "patch": 0
+  }
+}

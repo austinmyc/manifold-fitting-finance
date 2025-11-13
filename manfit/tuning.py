@@ -5,8 +5,8 @@ from sklearn.decomposition import PCA
 from skopt import gp_minimize
 from skopt.space import Real
 from skopt.utils import use_named_args
-from manfit_ours import manfit_ours
-from noisy_data_generation import *
+from manfit.manfit_ours import manfit_ours
+from manfit.noisy_data_generation import *
 
 def quality_score(data, intrinsic_dim=2, k=10):
     """
@@ -88,7 +88,7 @@ def objective(sig):
     print(f"sig={sig:.4f}: quality_score={score:.6f}")
 
     return score
-
+'''
 print("\nStarting Bayesian Optimization...")
 print("=" * 50)
 
@@ -113,3 +113,4 @@ print(f"Best quality_score: {best_score:.6f}")
 final_denoised = manfit_ours(noisy, best_sig, noisy)
 
 print(final_denoised - noisy)
+'''
