@@ -5,7 +5,7 @@ from skopt import gp_minimize
 from skopt.space import Real
 from skopt.utils import use_named_args
 from utils.zhipu_embedding import get_zhipu_embedding
-from manfit.manfit_ours import manfit_ours
+from manfit.manfit_ours_gpu import manfit_ours_gpu_batched as manfit_ours
 from manfit.tuning import quality_score
 import logging
 from tqdm import tqdm
