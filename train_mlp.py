@@ -422,7 +422,7 @@ def main():
                        help='Weight decay (L2 regularization)')
     parser.add_argument('--dropout', type=float, default=0.3,
                        help='Dropout rate')
-    parser.add_argument('--epochs', type=int, default=50,
+    parser.add_argument('--epochs', type=int, default=100,
                        help='Number of training epochs')
     parser.add_argument('--val-split', type=float, default=0.2,
                        help='Validation split ratio')

@@ -215,8 +215,8 @@ def main():
     # Hyperparameters
     HIDDEN_DIM = 256
     BATCH_SIZE = 64
-    LEARNING_RATE = 0.001
-    NUM_EPOCHS = 50
+    LEARNING_RATE = 0.005
+    NUM_EPOCHS = 100
 
     logging.info(f"\nHyperparameters:")
     logging.info(f"  Hidden dimension: {HIDDEN_DIM}")
@@ -254,10 +254,10 @@ def main():
 
     # Step 3: Transform test embeddings using transformed training data
     logging.info("\n" + "="*70)
-    logging.info("Step 3: Transforming test embeddings using fitted manifold...")
-    logging.info(f"Using transformed training embeddings as reference with sigma={best_sigma:.4f}")
+    logging.info("Step 3: Transforming test embeddings...")
+    logging.info(f"Using original training embeddings as reference with sigma={best_sigma:.4f}")
     test_embeddings_transformed = manfit_ours(
-        sample=train_embeddings_transformed,  # Use transformed training as reference
+        sample=train_embeddings_original,
         sig=best_sigma,
         sample_init=test_embeddings_original
     )
@@ -342,7 +342,7 @@ def main():
 
     # Initialize model with same architecture
     model_trans = TwoLayerMLP(input_dim=2048, hidden_dim=HIDDEN_DIM, num_classes=3).to(device)
-    optimizer_trans = optim.Adam(model_trans.parameters(), lr=LEARNING_RATE)
+    optimizer_trans = optim.Adam(model_trans.parameters(), lr=LEARNING_RATE, weight_decay = 1e-3)
 
     # Train
     logging.info("Training model on transformed embeddings...")
