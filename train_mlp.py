@@ -416,7 +416,7 @@ def main():
                        help='Hidden layer dimension')
     parser.add_argument('--batch-size', type=int, default=64,
                        help='Batch size')
-    parser.add_argument('--learning-rate', type=float, default=0.001,
+    parser.add_argument('--learning-rate', type=float, default=0.03,
                        help='Learning rate')
     parser.add_argument('--weight-decay', type=float, default=1e-4,
                        help='Weight decay (L2 regularization)')
